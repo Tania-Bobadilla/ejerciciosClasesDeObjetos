@@ -75,6 +75,12 @@ export default class Producto {
     aumentarStock (cantidad){
        return this.#stock = this.#stock + cantidad 
     }
+    
+
+
+    calcularMontoDetalle(){
+        return this.#stock * this.pr.precioUnitario;
+    }
 
 }  
 

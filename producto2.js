@@ -58,12 +58,20 @@ export default class Producto {
 
         // al atributo instanciado se le aumenta o disminuye la cantidad, el stock del objeto instancia mantiene su cambio
         // this.#stock = this.#stock - cantidad
-        // if(this.#stock >= cantidad){
-        this.#stock = this.#stock - cantidad
-       //
+        if(this.#stock >= cantidad){
+            return this.#stock = this.#stock - cantidad
+        }else{
+            console.log("el stock que se descuenta debe ser menor a la cantidad del producto");
+            
+        }
+        
     }    
     aumentarStock (cantidad){
         return this.#stock + cantidad 
+    }
+
+    mostrarStockTotal (){
+        return this.#stock
     }
 
 } 
